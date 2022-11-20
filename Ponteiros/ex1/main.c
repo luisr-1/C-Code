@@ -1,23 +1,27 @@
 #include <stdio.h>
 
-void interacao(int *end, int num);
-
 int main(void){
-    int marcus = 0, iara = 0, marcelo = 0;
-    int* pointer = NULL;
-    interacao(&iara, 10);
-    printf("%d\n", iara);
+    int x = 3;
+    float y = 3.4;
+    char z = 'A';
 
-    pointer = &iara;
+    int *ptrX = &x;
+    float *ptrY = &y;
+    char *ptrZ = &z;
 
-    printf("%p\n", &iara);
-    printf("%p\n", pointer);
+    printf("Antes:\n");
+    printf("x = %d\n", x);
+    printf("y = %f\n", y);
+    printf("z = %c\n", z);
 
-    *pointer = 20;
-    printf("%d\n", iara);
+    scanf("%d", ptrX);
+    scanf("%f", ptrY);
+    scanf("%c", ptrZ);
+
+    printf("Depois:\n");
+    printf("x = %d\n", x);
+    printf("y = %f\n", y);
+    printf("z = %c\n", z);
+
     return 0;
-}
-
-void interacao(int *end, int num){
-    *end = num;
 }
