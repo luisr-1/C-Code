@@ -8,12 +8,9 @@ int main(void){
 }
 
 int fibonacci(int a){
-    if(a == 1){
-        return a;
-    }
-
-    else{
-        return a - 1;
+    if(a == 0 || a == 1){
+        return 1;
+    } else{
+        return fib(a - 2) + fib(a - 1);
     }
 }
-
